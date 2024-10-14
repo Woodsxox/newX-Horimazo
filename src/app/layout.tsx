@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "Horimazo",
   description:
     "Horimazo, Shop fast, Shop smart! Offering unique products and secure shopping",
+  
 };
 
 export default function RootLayout({
