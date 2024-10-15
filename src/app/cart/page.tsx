@@ -2,7 +2,7 @@ import { getCart } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/format";
 import CartEntry from "./CartEntry";
 import { setProductQuantity } from "./actions";
-import PagenationBar from "@/components/PAginationBar";
+import PagenationBar from "@/components/PaginationBar";
 
 export const metadata = {
   title: "Your Cart - Horimazo",
