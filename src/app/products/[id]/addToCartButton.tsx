@@ -42,7 +42,7 @@ export default function AddToCartButton({
           />
         </svg>
       </button>
-      {isPending && <span className="loading loading-infinity loading-md"/>}
+      {isPending && <span className="loading loading-infinity loading-md" />}
       {!isPending && success && (
         <span className="text-success">Added to Cart.</span>
       )}

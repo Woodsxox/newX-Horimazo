@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer";
+import SessionProvider from "./SessionProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +21,6 @@ export const metadata: Metadata = {
   title: "Horimazo",
   description:
     "Horimazo, Shop fast, Shop smart! Offering unique products and secure shopping",
-  
 };
 
 export default function RootLayout({
@@ -31,7 +33,11 @@ export default function RootLayout({
       <body
         className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="p-4 max-w-7xl m-auto min-w[300px]">{children}</main>
+        <SessionProvider>
+          <Navbar />
+          <main className="p-4 max-w-7xl m-auto min-w[300px]">{children}</main>
+          <Footer />
+        </SessionProvider>
       </body>
     </html>
   );
