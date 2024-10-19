@@ -31,11 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-white ${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <SessionProvider>
           <Navbar />
-          <main className="p-4 max-w-7xl m-auto min-w[300px]">{children}</main>
+          <main className=" flex-grow p-4 max-w-7xl m-auto min-w[300px]">{children}</main>
           <Footer />
         </SessionProvider>
       </body>

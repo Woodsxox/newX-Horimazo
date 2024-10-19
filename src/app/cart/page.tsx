@@ -2,7 +2,6 @@ import { getCart } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/format";
 import CartEntry from "./CartEntry";
 import { setProductQuantity } from "./actions";
-import PagenationBar from "@/components/PaginationBar";
 
 export const metadata = {
   title: "Your Cart - Horimazo",
@@ -28,7 +27,7 @@ export default async function CartPage() {
         </p>
         <button className="btn-primary btn sm:w-[200px]">Checkout</button>
       </div>
-      <PagenationBar currentPage={3} totalPages={99} />
+      
     </div>
   );
 }

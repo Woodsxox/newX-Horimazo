@@ -18,7 +18,7 @@ export default function AddToCartButton({
     <div className="flex items-center gap-2">
       <button
         className="btn btn-primary"
-        onClick={() => {
+        onClick={async () => {
           setSuccess(false);
           startTransition(async () => {
             await incrementProductQuantity(productId);
