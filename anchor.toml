@@ -1,0 +1,10 @@
+[lcl-host]
+realm-apid = 'localhost'
+
+[org]
+apid = 'sethxox'
+
+[service]
+apid = 'horimazo'
+category = 'javascript'
+cert-style = 'acme'

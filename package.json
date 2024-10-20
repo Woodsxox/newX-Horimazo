@@ -10,11 +10,12 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.7.0",
+    "@prisma/client": "^5.20.0",
     "@stripe/react-stripe-js": "^2.8.1",
     "@stripe/stripe-js": "^4.8.0",
     "@types/stripe": "^8.0.416",
-    "@auth/prisma-adapter": "^2.7.0",
-    "@prisma/client": "^5.20.0",
+    "anchor-pki": "^0.3.2",
     "daisyui": "^4.12.13",
     "eslint-config-prettier": "^9.1.0",
     "next": "14.2.15",
@@ -24,8 +25,8 @@
     "prisma": "^5.20.0",
     "react": "^18",
     "react-dom": "^18",
-    "zod": "^3.23.8",
-    "stripe": "^17.2.0"
+    "stripe": "^17.2.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
