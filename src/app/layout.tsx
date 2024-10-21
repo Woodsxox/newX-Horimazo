@@ -35,13 +35,7 @@ export default function RootLayout({
       >
         <SessionProvider>
           <Navbar />
-          <div>
-            <h1>hello</h1>
-          </div>
           <main className=" flex-grow p-4 max-w-7xl m-auto min-w[300px]">{children}</main>
-            <div>
-            <h1>hello</h1>
-          </div>
           <Footer />
         </SessionProvider>
       </body>

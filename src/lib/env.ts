@@ -1,3 +1,5 @@
+
+
 import zod from "zod";
 
 const envSchema = zod.object({
@@ -8,4 +10,12 @@ const envSchema = zod.object({
   NEXTAUTH_SECRET: zod.string().min(1, "NEXTAUTH_SECRET cannot be empty"),
 });
 
-export const env = envSchema.parse(process.env);
+  const parsedEnv = envSchema.safeParse(process.env);
+
+ if (!parsedEnv.success) {
+  console.error("Invalid environment variables:", parsedEnv.error.flatten());
+   const errorMessages = JSON.stringify(parsedEnv.error.flatten(), null, 2); 
+   throw new Error(`Invalid environment variables: \n${errorMessages}`);
+ }
+
+ export const env = parsedEnv.data;
