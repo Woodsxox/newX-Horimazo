@@ -7,6 +7,8 @@ import ShoppingCartButton from "./ShoppingCartButton";
 import UserMenuButton from "./UserMenuButton";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
+import AboutButton from "./AboutButton";
+// import ShopButtons from "./ShopBtton";
 
 async function searchProducts(formData: FormData) {
   "use server";
@@ -21,6 +23,7 @@ async function searchProducts(formData: FormData) {
 export default async function Navbar() {
   const session = await getServerSession(authOptions);
   const cart = await getCart();
+
   return (
     <div className=" bg-yellow-50">
       <div className="navbar max-w-7xl m-auto flex-col sm:flex-row gap-2">
@@ -30,6 +33,8 @@ export default async function Navbar() {
             Horimazo
           </Link>
         </div>
+{/* <ShopButtons/> */}
+         <AboutButton />
         <div className="flex-none gap-2">
           <form action={searchProducts}>
             <div className="form-control">
@@ -42,6 +47,7 @@ export default async function Navbar() {
               />
             </div>
           </form>
+
           <ShoppingCartButton cart={cart} />
           <UserMenuButton session={session} />
         </div>

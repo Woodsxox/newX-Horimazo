@@ -4,6 +4,7 @@ import CartEntry from "./CartEntry";
 import { setProductQuantity } from "./actions";
 import Link from "next/link";
 
+
 export const metadata = {
   title: "Your Cart - Horimazo",
 };
@@ -33,13 +34,15 @@ export default async function CartPage() {
         <div className="flex flex-col items-end sm:items-center">
           <p className="mb-3 font-bold">
             Total: {formatPrice(cart?.subtotal || 0)}
-          </p>
+            </p>
+             <Link href="/checkout">
           <button
             className="btn-primary btn sm:w-[200px]"
             disabled={!cart?.items.length}
           >
             Checkout
-          </button>
+              </button>
+              </Link>
         </div>
       )}
     </div>
